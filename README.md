@@ -2,7 +2,7 @@
 
 **Version:** 25.11-alpha.01  
 **Author:** Scott Beveridge  
-**License:** MIT (customize if needed)
+**License:** MIT 
 
 A modern, production-ready **PyQt5 application skeleton** featuring:
 - ✅ Pre-wired **UI loading** via `ui_initializer.py`
