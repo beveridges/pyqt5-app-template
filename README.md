@@ -21,7 +21,7 @@ git clone https://github.com/beveridges/pyqt5-app-template.git
 cd pyqt5-app-template
 
 ## When ready to build
-'''python
+```python
 python build_template.py
 python build_template_msi.py
 
