@@ -1,0 +1,618 @@
+==============================================================
+  🧩 Setting up Conda environment: environment_template
+  📄 Logging all output to: setup_environment_template_20251107_142225.log
+==============================================================
+🚀 Creating environment with Python 3.10.18...
+Channels:
+ - conda-forge
+ - defaults
+Platform: win-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 25.7.0
+    latest version: 25.9.1
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: C:\Users\Scott\miniconda3\envs\environment_template
+
+  added / updated specs:
+    - python=3.10.18
+
+
+The following NEW packages will be INSTALLED:
+
+  bzip2              conda-forge/win-64::bzip2-1.0.8-h0ad9c76_8 
+  ca-certificates    conda-forge/noarch::ca-certificates-2025.10.5-h4c7d964_0 
+  libexpat           conda-forge/win-64::libexpat-2.7.1-hac47afa_0 
+  libffi             conda-forge/win-64::libffi-3.5.2-h52bdfb6_0 
+  liblzma            conda-forge/win-64::liblzma-5.8.1-h2466b09_2 
+  libsqlite          conda-forge/win-64::libsqlite-3.51.0-hf5d6505_0 
+  libzlib            conda-forge/win-64::libzlib-1.3.1-h2466b09_2 
+  openssl            conda-forge/win-64::openssl-3.5.4-h725018a_0 
+  pip                conda-forge/noarch::pip-25.2-pyh8b19718_0 
+  python             conda-forge/win-64::python-3.10.18-h8c5b53a_0_cpython 
+  setuptools         conda-forge/noarch::setuptools-80.9.0-pyhff2d567_0 
+  tk                 conda-forge/win-64::tk-8.6.13-h2c6b04d_2 
+  tzdata             conda-forge/noarch::tzdata-2025b-h78e105d_0 
+  ucrt               conda-forge/win-64::ucrt-10.0.26100.0-h57928b3_0 
+  vc                 conda-forge/win-64::vc-14.3-h2b53caa_32 
+  vc14_runtime       conda-forge/win-64::vc14_runtime-14.44.35208-h818238b_32 
+  vcomp14            conda-forge/win-64::vcomp14-14.44.35208-h818238b_32 
+  wheel              conda-forge/noarch::wheel-0.45.1-pyhd8ed1ab_1 
+
+
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: - \ | done
+Verifying transaction: - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - done
+Executing transaction: | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ done
+#
+# To activate this environment, use
+#
+#     $ conda activate environment_template
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+🔄 Activating environment...
+📦 Installing core dependencies...
+Channels:
+ - conda-forge
+ - defaults
+Platform: win-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 25.7.0
+    latest version: 25.9.1
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: C:\Users\Scott\miniconda3\envs\environment_template
+
+  added / updated specs:
+    - spyder-kernels=3.0
+
+
+The following NEW packages will be INSTALLED:
+
+  asttokens          conda-forge/noarch::asttokens-3.0.0-pyhd8ed1ab_1 
+  cloudpickle        conda-forge/noarch::cloudpickle-3.1.2-pyhd8ed1ab_0 
+  colorama           conda-forge/noarch::colorama-0.4.6-pyhd8ed1ab_1 
+  comm               conda-forge/noarch::comm-0.2.3-pyhe01879c_0 
+  debugpy            conda-forge/win-64::debugpy-1.8.17-py310h699e580_0 
+  decorator          conda-forge/noarch::decorator-5.2.1-pyhd8ed1ab_0 
+  exceptiongroup     conda-forge/noarch::exceptiongroup-1.3.0-pyhd8ed1ab_0 
+  executing          conda-forge/noarch::executing-2.2.1-pyhd8ed1ab_0 
+  importlib-metadata conda-forge/noarch::importlib-metadata-8.7.0-pyhe01879c_1 
+  ipykernel          conda-forge/noarch::ipykernel-6.31.0-pyh6dadd2b_0 
+  ipython            conda-forge/noarch::ipython-8.37.0-pyha7b4d00_0 
+  jedi               conda-forge/noarch::jedi-0.19.2-pyhd8ed1ab_1 
+  jupyter_client     conda-forge/noarch::jupyter_client-8.6.3-pyhd8ed1ab_1 
+  jupyter_core       conda-forge/noarch::jupyter_core-5.9.1-pyh6dadd2b_0 
+  krb5               conda-forge/win-64::krb5-1.21.3-hdf4eb48_0 
+  libsodium          conda-forge/win-64::libsodium-1.0.20-hc70643c_0 
+  matplotlib-inline  conda-forge/noarch::matplotlib-inline-0.2.1-pyhd8ed1ab_0 
+  nest-asyncio       conda-forge/noarch::nest-asyncio-1.6.0-pyhd8ed1ab_1 
+  packaging          conda-forge/noarch::packaging-25.0-pyh29332c3_1 
+  parso              conda-forge/noarch::parso-0.8.5-pyhcf101f3_0 
+  pickleshare        conda-forge/noarch::pickleshare-0.7.5-pyhd8ed1ab_1004 
+  platformdirs       conda-forge/noarch::platformdirs-4.5.0-pyhcf101f3_0 
+  prompt-toolkit     conda-forge/noarch::prompt-toolkit-3.0.52-pyha770c72_0 
+  psutil             conda-forge/win-64::psutil-7.1.3-py310h1637853_0 
+  pure_eval          conda-forge/noarch::pure_eval-0.2.3-pyhd8ed1ab_1 
+  pygments           conda-forge/noarch::pygments-2.19.2-pyhd8ed1ab_0 
+  python-dateutil    conda-forge/noarch::python-dateutil-2.9.0.post0-pyhe01879c_2 
+  python_abi         conda-forge/noarch::python_abi-3.10-8_cp310 
+  pywin32            conda-forge/win-64::pywin32-311-py310h282bd7d_1 
+  pyzmq              conda-forge/win-64::pyzmq-27.1.0-py310h535538e_0 
+  six                conda-forge/noarch::six-1.17.0-pyhe01879c_1 
+  spyder-kernels     conda-forge/noarch::spyder-kernels-3.0.5-win_pyh7428d3b_0 
+  stack_data         conda-forge/noarch::stack_data-0.6.3-pyhd8ed1ab_1 
+  tornado            conda-forge/win-64::tornado-6.5.2-py310h29418f3_2 
+  traitlets          conda-forge/noarch::traitlets-5.14.3-pyhd8ed1ab_1 
+  typing_extensions  conda-forge/noarch::typing_extensions-4.15.0-pyhcf101f3_0 
+  wcwidth            conda-forge/noarch::wcwidth-0.2.14-pyhd8ed1ab_0 
+  zeromq             conda-forge/win-64::zeromq-4.3.5-h5bddc39_9 
+  zipp               conda-forge/noarch::zipp-3.23.0-pyhd8ed1ab_0 
+
+
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: - \ | / - done
+Verifying transaction: | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / done
+Executing transaction: \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / done
+Channels:
+ - conda-forge
+ - defaults
+Platform: win-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 25.7.0
+    latest version: 25.9.1
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: C:\Users\Scott\miniconda3\envs\environment_template
+
+  added / updated specs:
+    - pyqt=5
+
+
+The following NEW packages will be INSTALLED:
+
+  glib               conda-forge/win-64::glib-2.86.1-hde84fb4_1 
+  glib-tools         conda-forge/win-64::glib-tools-2.86.1-he647baa_1 
+  gst-plugins-base   conda-forge/win-64::gst-plugins-base-1.24.11-h3fe0a9e_0 
+  gstreamer          conda-forge/win-64::gstreamer-1.24.11-h233a61a_0 
+  icu                conda-forge/win-64::icu-75.1-he0c23c2_0 
+  libclang13         conda-forge/win-64::libclang13-21.1.5-default_ha2db4b5_0 
+  libglib            conda-forge/win-64::libglib-2.86.1-hd9c3897_1 
+  libiconv           conda-forge/win-64::libiconv-1.18-hc1393d2_2 
+  libintl            conda-forge/win-64::libintl-0.22.5-h5728263_3 
+  libintl-devel      conda-forge/win-64::libintl-devel-0.22.5-h5728263_3 
+  libjpeg-turbo      conda-forge/win-64::libjpeg-turbo-3.1.2-hfd05255_0 
+  libogg             conda-forge/win-64::libogg-1.3.5-h2466b09_1 
+  libpng             conda-forge/win-64::libpng-1.6.50-h7351971_1 
+  libvorbis          conda-forge/win-64::libvorbis-1.3.7-h5112557_2 
+  pcre2              conda-forge/win-64::pcre2-10.46-h3402e2f_0 
+  ply                conda-forge/noarch::ply-3.11-pyhd8ed1ab_3 
+  pyqt               conda-forge/win-64::pyqt-5.15.11-py310hdf200a9_2 
+  pyqt5-sip          conda-forge/win-64::pyqt5-sip-12.17.0-py310h73ae2b4_2 
+  qt-main            conda-forge/win-64::qt-main-5.15.15-hb098fff_6 
+  sip                conda-forge/win-64::sip-6.10.0-py310h73ae2b4_1 
+  toml               conda-forge/noarch::toml-0.10.2-pyhd8ed1ab_1 
+  tomli              conda-forge/noarch::tomli-2.3.0-pyhcf101f3_0 
+  zstd               conda-forge/win-64::zstd-1.5.7-hbeecb71_2 
+
+
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: - \ | / - \ | done
+Verifying transaction: - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - done
+Executing transaction: | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | done
+Channels:
+ - opensim-org
+ - conda-forge
+ - defaults
+Platform: win-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 25.7.0
+    latest version: 25.9.1
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: C:\Users\Scott\miniconda3\envs\environment_template
+
+  added / updated specs:
+    - opensim=4.5.1
+
+
+The following NEW packages will be INSTALLED:
+
+  freeglut           conda-forge/win-64::freeglut-3.2.2-he0c23c2_3 
+  libblas            conda-forge/win-64::libblas-3.9.0-38_hf2e6a31_mkl 
+  libcblas           conda-forge/win-64::libcblas-3.9.0-38_h2a3cdd5_mkl 
+  libhwloc           conda-forge/win-64::libhwloc-2.12.1-default_h64bd3f2_1002 
+  liblapack          conda-forge/win-64::liblapack-3.9.0-38_hf9ab0e9_mkl 
+  libwinpthread      conda-forge/win-64::libwinpthread-12.0.0.r4.gg4f2fc60ca-h57928b3_10 
+  libxml2            conda-forge/win-64::libxml2-2.15.1-ha29bfb0_0 
+  libxml2-16         conda-forge/win-64::libxml2-16-2.15.1-h06f855e_0 
+  llvm-openmp        conda-forge/win-64::llvm-openmp-21.1.5-hfa2b4ca_0 
+  mkl                conda-forge/win-64::mkl-2025.3.0-hac47afa_454 
+  numpy              conda-forge/win-64::numpy-1.25.2-py310hd02465a_0 
+  opensim            opensim-org/win-64::opensim-4.5.1-py310np125 
+  tbb                conda-forge/win-64::tbb-2022.3.0-hd094cb3_1 
+  vs2015_runtime     conda-forge/win-64::vs2015_runtime-14.44.35208-h38c0c73_32 
+
+
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: - done
+Verifying transaction: | / - \ | / - \ | / - \ | / - \ | / - \ | done
+Executing transaction: - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / done
+Channels:
+ - conda-forge
+ - defaults
+Platform: win-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 25.7.0
+    latest version: 25.9.1
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: C:\Users\Scott\miniconda3\envs\environment_template
+
+  added / updated specs:
+    - matplotlib=3.10.0
+
+
+The following NEW packages will be INSTALLED:
+
+  _openmp_mutex      conda-forge/win-64::_openmp_mutex-4.5-2_gnu 
+  brotli             conda-forge/win-64::brotli-1.2.0-h17ff524_0 
+  brotli-bin         conda-forge/win-64::brotli-bin-1.2.0-h6910e44_0 
+  cairo              conda-forge/win-64::cairo-1.18.4-h5782bbf_0 
+  contourpy          conda-forge/win-64::contourpy-1.3.2-py310hc19bc0b_0 
+  cycler             conda-forge/noarch::cycler-0.12.1-pyhd8ed1ab_1 
+  double-conversion  conda-forge/win-64::double-conversion-3.3.1-he0c23c2_0 
+  font-ttf-dejavu-s~ conda-forge/noarch::font-ttf-dejavu-sans-mono-2.37-hab24e00_0 
+  font-ttf-inconsol~ conda-forge/noarch::font-ttf-inconsolata-3.000-h77eed37_0 
+  font-ttf-source-c~ conda-forge/noarch::font-ttf-source-code-pro-2.038-h77eed37_0 
+  font-ttf-ubuntu    conda-forge/noarch::font-ttf-ubuntu-0.83-h77eed37_3 
+  fontconfig         conda-forge/win-64::fontconfig-2.15.0-h765892d_1 
+  fonts-conda-ecosy~ conda-forge/noarch::fonts-conda-ecosystem-1-0 
+  fonts-conda-forge  conda-forge/noarch::fonts-conda-forge-1-hc364b38_1 
+  fonttools          conda-forge/win-64::fonttools-4.60.1-py310hdb0e946_0 
+  freetype           conda-forge/win-64::freetype-2.14.1-h57928b3_0 
+  graphite2          conda-forge/win-64::graphite2-1.3.14-hac47afa_2 
+  harfbuzz           conda-forge/win-64::harfbuzz-12.2.0-h5f2951f_0 
+  kiwisolver         conda-forge/win-64::kiwisolver-1.4.9-py310h1e1005b_2 
+  lcms2              conda-forge/win-64::lcms2-2.17-hbcf6048_0 
+  lerc               conda-forge/win-64::lerc-4.0.0-h6470a55_1 
+  libbrotlicommon    conda-forge/win-64::libbrotlicommon-1.2.0-hc82b238_0 
+  libbrotlidec       conda-forge/win-64::libbrotlidec-1.2.0-h431afc6_0 
+  libbrotlienc       conda-forge/win-64::libbrotlienc-1.2.0-ha521d6b_0 
+  libdeflate         conda-forge/win-64::libdeflate-1.25-h51727cc_0 
+  libfreetype        conda-forge/win-64::libfreetype-2.14.1-h57928b3_0 
+  libfreetype6       conda-forge/win-64::libfreetype6-2.14.1-hdbac1cb_0 
+  libgcc             conda-forge/win-64::libgcc-15.2.0-h1383e82_7 
+  libgomp            conda-forge/win-64::libgomp-15.2.0-h1383e82_7 
+  libtiff            conda-forge/win-64::libtiff-4.7.1-h8f73337_1 
+  libvulkan-loader   conda-forge/win-64::libvulkan-loader-1.4.328.1-h477610d_0 
+  libwebp-base       conda-forge/win-64::libwebp-base-1.6.0-h4d5522a_0 
+  libxcb             conda-forge/win-64::libxcb-1.17.0-h0e4246c_0 
+  libxslt            conda-forge/win-64::libxslt-1.1.43-h0fbe4c1_1 
+  matplotlib         conda-forge/win-64::matplotlib-3.10.0-py310h5588dad_0 
+  matplotlib-base    conda-forge/win-64::matplotlib-base-3.10.0-py310h37e0a56_0 
+  munkres            conda-forge/noarch::munkres-1.1.4-pyhd8ed1ab_1 
+  openjpeg           conda-forge/win-64::openjpeg-2.5.4-h24db6dd_0 
+  pillow             conda-forge/win-64::pillow-12.0.0-py310hfb50504_0 
+  pixman             conda-forge/win-64::pixman-0.46.4-h5112557_1 
+  pthread-stubs      conda-forge/win-64::pthread-stubs-0.4-h0e40799_1002 
+  pyparsing          conda-forge/noarch::pyparsing-3.2.5-pyhcf101f3_0 
+  pyside6            conda-forge/win-64::pyside6-6.9.3-py310h96c60bd_1 
+  qhull              conda-forge/win-64::qhull-2020.2-hc790b64_5 
+  qt6-main           conda-forge/win-64::qt6-main-6.9.3-ha0de62e_1 
+  unicodedata2       conda-forge/win-64::unicodedata2-17.0.0-py310h29418f3_0 
+  xorg-libxau        conda-forge/win-64::xorg-libxau-1.0.12-h0e40799_0 
+  xorg-libxdmcp      conda-forge/win-64::xorg-libxdmcp-1.1.5-h0e40799_0 
+  zlib-ng            conda-forge/win-64::zlib-ng-2.2.5-h32d8bfd_0 
+
+
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: - \ | / done
+Verifying transaction: \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ done
+Executing transaction: / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ done
+Channels:
+ - conda-forge
+ - defaults
+Platform: win-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 25.7.0
+    latest version: 25.9.1
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: C:\Users\Scott\miniconda3\envs\environment_template
+
+  added / updated specs:
+    - pandas=2.2.3
+
+
+The following NEW packages will be INSTALLED:
+
+  pandas             conda-forge/win-64::pandas-2.2.3-py310hb4db72f_3 
+  python-tzdata      conda-forge/noarch::python-tzdata-2025.2-pyhd8ed1ab_0 
+  pytz               conda-forge/noarch::pytz-2025.2-pyhd8ed1ab_0 
+
+
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: - done
+Verifying transaction: | / - \ | / - \ | / - \ | done
+Executing transaction: - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / done
+Channels:
+ - conda-forge
+ - defaults
+Platform: win-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 25.7.0
+    latest version: 25.9.1
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: C:\Users\Scott\miniconda3\envs\environment_template
+
+  added / updated specs:
+    - openpyxl=3.1.5
+
+
+The following NEW packages will be INSTALLED:
+
+  et_xmlfile         conda-forge/noarch::et_xmlfile-2.0.0-pyhd8ed1ab_1 
+  openpyxl           conda-forge/win-64::openpyxl-3.1.5-py310h5fa2519_2 
+
+
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: - done
+Verifying transaction: | / - \ | / - \ done
+Executing transaction: / - \ | / - \ | / - done
+Collecting pyinstaller==6.16.0
+  Using cached pyinstaller-6.16.0-py3-none-win_amd64.whl.metadata (8.5 kB)
+Collecting altgraph (from pyinstaller==6.16.0)
+  Using cached altgraph-0.17.4-py2.py3-none-any.whl.metadata (7.3 kB)
+Requirement already satisfied: packaging>=22.0 in c:\users\scott\miniconda3\envs\environment_template\lib\site-packages (from pyinstaller==6.16.0) (25.0)
+Collecting pefile!=2024.8.26,>=2022.5.30 (from pyinstaller==6.16.0)
+  Using cached pefile-2023.2.7-py3-none-any.whl.metadata (1.4 kB)
+Collecting pyinstaller-hooks-contrib>=2025.8 (from pyinstaller==6.16.0)
+  Using cached pyinstaller_hooks_contrib-2025.9-py3-none-any.whl.metadata (16 kB)
+Collecting pywin32-ctypes>=0.2.1 (from pyinstaller==6.16.0)
+  Using cached pywin32_ctypes-0.2.3-py3-none-any.whl.metadata (3.9 kB)
+Requirement already satisfied: setuptools>=42.0.0 in c:\users\scott\miniconda3\envs\environment_template\lib\site-packages (from pyinstaller==6.16.0) (80.9.0)
+Using cached pyinstaller-6.16.0-py3-none-win_amd64.whl (1.4 MB)
+Using cached pefile-2023.2.7-py3-none-any.whl (71 kB)
+Using cached pyinstaller_hooks_contrib-2025.9-py3-none-any.whl (444 kB)
+Using cached pywin32_ctypes-0.2.3-py3-none-any.whl (30 kB)
+Using cached altgraph-0.17.4-py2.py3-none-any.whl (21 kB)
+Installing collected packages: altgraph, pywin32-ctypes, pyinstaller-hooks-contrib, pefile, pyinstaller
+
+Successfully installed altgraph-0.17.4 pefile-2023.2.7 pyinstaller-6.16.0 pyinstaller-hooks-contrib-2025.9 pywin32-ctypes-0.2.3
+Channels:
+ - conda-forge
+ - defaults
+Platform: win-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 25.7.0
+    latest version: 25.9.1
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: C:\Users\Scott\miniconda3\envs\environment_template
+
+  added / updated specs:
+    - pytest-qt
+
+
+The following NEW packages will be INSTALLED:
+
+  iniconfig          conda-forge/noarch::iniconfig-2.3.0-pyhd8ed1ab_0 
+  pluggy             conda-forge/noarch::pluggy-1.6.0-pyhd8ed1ab_0 
+  pytest             conda-forge/noarch::pytest-8.4.2-pyhcf101f3_1 
+  pytest-qt          conda-forge/noarch::pytest-qt-4.5.0-pyhdecd6ff_0 
+
+
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: - done
+Verifying transaction: | / - \ | / - \ done
+Executing transaction: / - \ | / - \ | / - \ | / - \ | done
+Channels:
+ - conda-forge
+ - defaults
+Platform: win-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 25.7.0
+    latest version: 25.9.1
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: C:\Users\Scott\miniconda3\envs\environment_template
+
+  added / updated specs:
+    - pytest-cov
+    - pytest-sugar
+
+
+The following NEW packages will be INSTALLED:
+
+  coverage           conda-forge/win-64::coverage-7.11.1-py310hdb0e946_0 
+  pytest-cov         conda-forge/noarch::pytest-cov-7.0.0-pyhcf101f3_1 
+  pytest-sugar       conda-forge/noarch::pytest-sugar-1.1.1-pyhd8ed1ab_0 
+  termcolor          conda-forge/noarch::termcolor-3.2.0-pyhd8ed1ab_0 
+
+
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: - done
+Verifying transaction: | / - \ | / - \ done
+Executing transaction: / - \ | / - \ | / - \ | done
+🧾 Exporting environment to environment_template_export.yml...
+✅ Environment 'environment_template' created and exported successfully!
+📦 Environment snapshot: environment_template_export.yml
+🪵 Log file: setup_environment_template_20251107_142225.log
+🔌 Activating environment 'environment_template'...
+✅ Environment 'environment_template' is now active.
+==============================================================
+🎉 Setup complete for 'environment_template'!
+==============================================================
+[?2004h(environment_template) ]0;MINGW64:/c/Users/Scott/Dropbox/__PROJECTS__/.__APPLICATION_TEMPLATE__[32mScott@21D8CTO1WW [33m~/Dropbox/__PROJECTS__/.__APPLICATION_TEMPLATE__[36m[0m
+$ source setup_template_env.sh environment_template -a[C[C[6Pconda remove --name environment_template --all[C[C./setup_template_env.sh environment_template -a[C[C[1Pconda remove --name environment_template --all[C[C[C[C[C[C[C[Cenv list[Klist env[Kvironment_template_export.yml [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[?5h[?5l[?5h[?5l[?5h[?5l[?5h[?5l[?5h[?5l[?5h[?5l[?5h[?5lhistory
+[?2004l    1  git statyus -uno
+    2  git status -uno
+    3  cd BERNSTEIN/
+    4  git status -uno
+    5  git add -u
+    6  git status -uno
+    7  git commit -m "Upload, retrieve, and delete mots in PMS"
+    8  git push
+    9  cd ..
+   10  cd ..
+   11  cd ..
+   12  cd Documents/
+   13  cd _PYTHON_EXERCISES_/
+   14  ls
+   15  newpy binary_search
+   16  python 
+   17  python binary_search.py 
+   18  python binary_search.py 
+   19  python binary_search.py 
+   20  python binary_search.py 
+   21  python binary_search.py 
+   22  python binary_search.py 
+   23  python binary_search.py 
+   24  python binary_search.py 
+   25  python binary_search.py 
+   26  python binary_search.py 
+   27  python binary_search.py 
+   28  python binary_search.py 
+   29  python binary_search.py 
+   30  python binary_search.py 
+   31  python binary_search.py 
+   32  python binary_search.py 
+   33  python binary_search.py 
+   34  python binary_search.py 
+   35  python binary_search.py 
+   36  python binary_search.py 
+   37  python binary_search.py 
+   38  python binary_search.py 
+   39  python binary_search.py 
+   40  python binary_search.py 
+   41  python -m PyInstaller --clean --log-level=DEBUG main.py
+   42  cd MVC_CALCULATOR/
+   43  python build.py
+   44  conda activate mvc_calculator
+   45  conda activate mvccalculator
+   46  python build.py
+   47  python build.py
+   48  python build.py
+   49  python build.py
+   50  conda deactivate
+   51  conda activate motushombro
+   52  python build.py
+   53  conda deactivate
+   54  conda activate mvc_calculator
+   55  conda activate mvccalculator
+   56  python build.py
+   57  python build.py
+   58  python build.py
+   59  python build.py
+   60  python build.py
+   61  python build.py
+   62  python build.py
+   63  s
+   64  ls
+   65  ls
+   66  cd ..
+   67  ld
+   68  cd .__
+   69  cd .__APPLICATION_TEMPLATE__/
+   70  ls
+   71  python build_template.py --onedir
+   72  ls
+   73  python build_template.py --onedir
+   74  python build_template.py
+   75  ls
+   76  cd ..
+   77  cd ..
+   78  cd __PROJECTS__/.__APPLICATION_TEMPLATE__/
+   79  ./setup_template_env.sh 
+   80  conda deactivate
+   81  ./setup_template_env.sh 
+   82  ./setup_template_env.sh environment_template
+   83  conda activate environment_template_export.yml 
+   84* conda activate
+   85  conda activate environment_template_export
+   86  conda activate environment_template
+   87  conda deactivate
+   88  conda list env
+   89  conda env list
+   90  conda remove --name environment_template --all
+   91  ./setup_template_env.sh environment_template -a
+   92  conda remove --name environment_template --all
+   93  source setup_template_env.sh environment_template -a
+   94  history
+[?2004h(environment_template) ]0;MINGW64:/c/Users/Scott/Dropbox/__PROJECTS__/.__APPLICATION_TEMPLATE__[32mScott@21D8CTO1WW [33m~/Dropbox/__PROJECTS__/.__APPLICATION_TEMPLATE__[36m[0m
+$ !56
+[?2004lpython build.py
+C:\Users\Scott\miniconda3\envs\environment_template\python.exe: can't open file 'C:\\Users\\Scott\\Dropbox\\__PROJECTS__\\.__APPLICATION_TEMPLATE__\\build.py': [Errno 2] No such file or directory
