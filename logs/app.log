@@ -115,3 +115,16 @@
 2025-11-07 15:43:41,683 [INFO] Logger initialized at c:\users\scott\dropbox\__projects__\.__application_template__\logs\app.log
 2025-11-07 15:43:42,005 [INFO] Loading UI via ui_initializer.setup()
 2025-11-07 15:43:42,062 [INFO] Main window ready
+2025-11-07 15:43:53,055 [INFO] Application closing...
+2025-11-07 15:44:30,117 [INFO] Logger initialized at c:\users\scott\dropbox\__projects__\.__application_template__\logs\app.log
+2025-11-07 15:44:30,271 [INFO] Loading UI via ui_initializer.setup()
+2025-11-07 15:44:30,281 [INFO] Main window ready
+2025-11-07 15:46:28,477 [INFO] Application closing...
+2025-11-07 15:48:55,248 [INFO] Logger initialized at c:\users\scott\dropbox\__projects__\.__application_template__\logs\app.log
+2025-11-07 15:48:55,388 [INFO] Loading UI via ui_initializer.setup()
+2025-11-07 15:48:55,396 [INFO] Main window ready
+2025-11-07 15:49:03,908 [INFO] Application closing...
+2025-11-07 15:49:20,090 [INFO] Logger initialized at c:\users\scott\dropbox\__projects__\.__application_template__\logs\app.log
+2025-11-07 15:49:20,206 [INFO] Loading UI via ui_initializer.setup()
+2025-11-07 15:49:20,217 [INFO] Main window ready
+2025-11-07 15:54:15,843 [INFO] Application closing...
