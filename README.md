@@ -20,8 +20,7 @@ A modern, production-ready **PyQt5 application skeleton** featuring:
 git clone https://github.com/beveridges/pyqt5-app-template.git
 cd pyqt5-app-template
 
-## When ready to build
-```python
+### 2. When ready to build
 python build_template.py
 python build_template_msi.py
 
