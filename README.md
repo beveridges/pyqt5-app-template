@@ -4,6 +4,138 @@
 **Author:** Scott Beveridge  
 **License:** MIT  
 
+## 🧩 Release Workflow — MOTUS / Application Template
+
+This section describes the full lifecycle for building, tagging, and publishing releases for the **MOTUS Application Template**.
+
+---
+
+### 1️⃣ Development & Testing Phase
+
+During development:
+```bash
+git add .
+git commit -m "Implement new plotting overlay system"
+```
+
+To test your current build as a portable executable:
+```bash
+python build_template.py
+```
+or if you’ve made a helper script:
+```bash
+./build_template.sh
+```
+
+> This produces a portable executable under `dist/`, ideal for quick testing on other systems.
+
+---
+
+### 2️⃣ Preparing a Release Candidate
+
+Once the portable build is stable:
+
+1. **Freeze your changes:**
+   ```bash
+   git status
+   git add .
+   git commit -m "Finalize v25.11-alpha.01.00 portable build"
+   ```
+
+2. **Create a release tag:**
+   ```bash
+   git tag -a v25.11-alpha.01.00 -m "Alpha release candidate for MOTUS"
+   git push origin v25.11-alpha.01.00
+   ```
+
+> Tags mark a specific snapshot in Git — your official “release point.”
+
+---
+
+### 3️⃣ Building the MSI Installer
+
+Once tagged, build the MSI:
+
+```bash
+python build_template_msi.py
+```
+or with your shell wrapper:
+```bash
+./build_msi.sh
+```
+
+This should:
+- Pull the version info from `version_info.py` or `git describe`
+- Output a `.msi` file under `dist/`, for example:
+  ```
+  dist/MOTUS_Setup_v25.11-alpha.01.00.msi
+  ```
+
+---
+
+### 4️⃣ Creating a GitHub Release
+
+Once the MSI is verified:
+
+1. Go to your GitHub repository → **Releases** → **Draft a new release**
+2. Choose your tag (e.g. `v25.11-alpha.01.00`)
+3. Fill in:
+   - **Title:** `MOTUS v25.11-alpha.01.00`
+   - **Notes:** Summary of new features or fixes
+4. Attach both files:
+   - `MVC_Calculator_Portable_v25.11-alpha.01.00.zip`
+   - `MOTUS_Setup_v25.11-alpha.01.00.msi`
+5. Click **“Publish Release”**
+
+---
+
+### 5️⃣ Automating the Process
+
+You can simplify the process with a release script named `release_build.sh`:
+
+```bash
+#!/bin/bash
+# release_build.sh — build, tag, and prepare GitHub release
+
+VERSION="25.11-alpha.01.00"
+MESSAGE="Release $VERSION"
+
+echo "🔧 Building portable executable..."
+python build_template.py || exit 1
+
+echo "🏷️  Creating git tag v$VERSION..."
+git add .
+git commit -m "$MESSAGE"
+git tag -a "v$VERSION" -m "$MESSAGE"
+git push origin main --tags
+
+echo "📦 Building MSI installer..."
+python build_template_msi.py || exit 1
+
+echo "✅ All done! Go to GitHub → Releases → 'Draft new release' → Select tag v$VERSION"
+```
+
+If you have the **GitHub CLI** installed, you can also publish directly:
+
+```bash
+gh release create "v$VERSION" dist/*.msi dist/*.zip \
+  --title "MOTUS $VERSION" \
+  --notes "$MESSAGE"
+```
+
+---
+
+### 6️⃣ Summary Flow
+
+| Step | Action | Script |
+|------|---------|--------|
+| Develop & test | Build portable executable | `build_template.py` |
+| Freeze | Commit + tag release | `git tag -a vX.Y` |
+| Build installer | Generate `.msi` | `build_template_msi.py` |
+| Publish | Upload to GitHub | `release_build.sh` or `gh release create` |
+
+
+
 A modern, production-ready **PyQt5 application skeleton** featuring:
 
 - ✅ Pre-wired **UI loading** via `ui_initializer.py`
