@@ -131,3 +131,4 @@
 2025-11-07 16:30:54,559 [INFO] Logger initialized at c:\users\scott\dropbox\__projects__\.__application_template__\logs\app.log
 2025-11-07 16:30:54,708 [INFO] Loading UI via ui_initializer.setup()
 2025-11-07 16:30:54,744 [INFO] Main window ready
+2025-11-07 16:31:06,963 [INFO] Application closing...

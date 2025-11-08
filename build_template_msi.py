@@ -2,15 +2,16 @@
 # -*- coding: utf-8 -*-
 """
 ================================================================================
-MyApp Template — MSI + Portable ZIP Builder
+Application Template — MSI + Portable ZIP Builder
 --------------------------------------------------------------------------------
-✓ Builds MSI installer via WiX Toolset
-✓ Archives .msi and .zip to Documents/.builds/myapptemplate/msi/builds/
+✓ Builds MSI installer via WiX Toolset (per-user)
+✓ Archives .msi and .zip to Documents/.builds/<app>/msi/builds/
 ✓ Uses same versioning as build_template.py
+✓ Auto-generates UpgradeCode (GUID) on first run
 ================================================================================
 """
 
-import os, sys, shutil, subprocess
+import os, sys, shutil, subprocess, re, uuid
 from pathlib import Path
 from datetime import datetime
 from utilities.path_utils import base_path
@@ -41,7 +42,15 @@ for line in VERSION_INFO.read_text(encoding="utf-8").splitlines():
         BUILDNUMBER = line.split("=")[1].strip().strip('"')
         break
 
+# --- Convert to WiX-safe version (integers only) ---
+def to_wix_version(v: str) -> str:
+    nums = re.findall(r"\d+", v)
+    nums = (nums + ["0", "0", "0", "0"])[:4]
+    return ".".join(nums)
+
+WIX_VERSION = to_wix_version(BUILDNUMBER)
 print(f"[OK] Using build number: {BUILDNUMBER}")
+print(f"[OK] Converted WiX-safe version: {WIX_VERSION}")
 
 # ------------------------------------------------------------------------------
 # Locate the EXE
@@ -52,14 +61,25 @@ if not EXE_PATH.exists():
     sys.exit(1)
 
 # ------------------------------------------------------------------------------
+# Generate or reuse UpgradeCode GUID
+# ------------------------------------------------------------------------------
+GUID_FILE = MSI_ROOT / "upgradecode.txt"
+if GUID_FILE.exists():
+    UPGRADE_CODE = GUID_FILE.read_text(encoding="utf-8").strip()
+else:
+    UPGRADE_CODE = str(uuid.uuid4())
+    GUID_FILE.write_text(UPGRADE_CODE, encoding="utf-8")
+print(f"[OK] Using UpgradeCode: {UPGRADE_CODE}")
+
+# ------------------------------------------------------------------------------
 # Generate .wxs file for WiX
 # ------------------------------------------------------------------------------
 WXS_PATH = MSI_ROOT / f"{APP_NAME}.wxs"
 wxs_content = f"""<?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-  <Product Id="*" Name="{APP_NAME}" Language="1033" Version="{BUILDNUMBER}"
-           Manufacturer="Moviolabs" UpgradeCode="9a1f9b7a-d0b3-4b8a-aad9-2d2b06c9a111">
-    <Package InstallerVersion="500" Compressed="yes" InstallScope="perMachine" />
+  <Product Id="*" Name="{APP_NAME}" Language="1033" Version="{WIX_VERSION}"
+           Manufacturer="Moviolabs" UpgradeCode="{UPGRADE_CODE}">
+    <Package InstallerVersion="500" Compressed="yes" InstallScope="perUser" />
 
     <MediaTemplate />
     <Icon Id="AppIcon.ico" SourceFile="{ICON_PATH}" />
@@ -69,28 +89,52 @@ wxs_content = f"""<?xml version="1.0" encoding="UTF-8"?>
       <Directory Id="ProgramFilesFolder">
         <Directory Id="INSTALLFOLDER" Name="{APP_NAME}" />
       </Directory>
+      <Directory Id="ProgramMenuFolder" />
+      <Directory Id="DesktopFolder" />
     </Directory>
 
     <DirectoryRef Id="INSTALLFOLDER">
-      <Component Id="MainExecutable" Guid="*" >
+
+      <!-- 1️⃣ Main executable -->
+      <Component Id="MainExecutable" Guid="*">
         <File Id="AppEXE" Source="{EXE_PATH}" KeyPath="yes" />
+      </Component>
+
+      <!-- 2️⃣ Registry marker for uninstall tracking -->
+      <Component Id="RegistryMarker" Guid="*">
+        <RegistryKey Root="HKCU" Key="Software\\{APP_NAME}"
+                     ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryValue Name="Installed" Type="integer" Value="1" KeyPath="yes" />
+        </RegistryKey>
+      </Component>
+
+      <!-- 3️⃣ Shortcuts, using registry as KeyPath -->
+      <Component Id="UserShortcuts" Guid="*">
+        <RegistryKey Root="HKCU" Key="Software\\{APP_NAME}\\Shortcuts"
+                     ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryValue Name="Created" Type="integer" Value="1" KeyPath="yes" />
+        </RegistryKey>
+
         <Shortcut Id="DesktopShortcut" Directory="DesktopFolder"
-                  Name="{APP_NAME}" WorkingDirectory="INSTALLFOLDER"
-                  Icon="AppIcon.ico" IconIndex="0"
-                  Advertise="no" />
+                  Name="{APP_NAME}" Target="[INSTALLFOLDER]{APP_NAME}.exe"
+                  Icon="AppIcon.ico" IconIndex="0" Advertise="no" />
         <Shortcut Id="StartMenuShortcut" Directory="ProgramMenuFolder"
-                  Name="{APP_NAME}" WorkingDirectory="INSTALLFOLDER"
-                  Icon="AppIcon.ico" IconIndex="0"
-                  Advertise="no" />
+                  Name="{APP_NAME}" Target="[INSTALLFOLDER]{APP_NAME}.exe"
+                  Icon="AppIcon.ico" IconIndex="0" Advertise="no" />
+
         <RemoveFile Id="RemoveShortcutDesktop" Name="{APP_NAME}.lnk"
                     On="uninstall" Directory="DesktopFolder" />
         <RemoveFile Id="RemoveShortcutMenu" Name="{APP_NAME}.lnk"
                     On="uninstall" Directory="ProgramMenuFolder" />
+        <RemoveFolder Id="RemoveStartMenuFolder" Directory="ProgramMenuFolder" On="uninstall" />
       </Component>
+
     </DirectoryRef>
 
     <Feature Id="DefaultFeature" Level="1">
       <ComponentRef Id="MainExecutable" />
+      <ComponentRef Id="RegistryMarker" />
+      <ComponentRef Id="UserShortcuts" />
     </Feature>
 
     <UIRef Id="WixUI_InstallDir" />
@@ -98,6 +142,7 @@ wxs_content = f"""<?xml version="1.0" encoding="UTF-8"?>
   </Product>
 </Wix>
 """
+
 WXS_PATH.write_text(wxs_content, encoding="utf-8")
 print(f"[OK] WXS file created at: {WXS_PATH}")
 

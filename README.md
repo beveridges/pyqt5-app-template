@@ -80,11 +80,11 @@ Once the MSI is verified:
 1. Go to your GitHub repository → **Releases** → **Draft a new release**
 2. Choose your tag (e.g. `v25.11-alpha.01.00`)
 3. Fill in:
-   - **Title:** `MOTUS v25.11-alpha.01.00`
+   - **Title:** `MVC Calculator v25.11-alpha.01.00`
    - **Notes:** Summary of new features or fixes
 4. Attach both files:
    - `MVC_Calculator_Portable_v25.11-alpha.01.00.zip`
-   - `MOTUS_Setup_v25.11-alpha.01.00.msi`
+   - `MVC Calculator_setup_v25.11-alpha.01.00.msi`
 5. Click **“Publish Release”**
 
 ---
